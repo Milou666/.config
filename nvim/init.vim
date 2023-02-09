@@ -13,18 +13,19 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'alvan/vim-closetag'
 Plug 'sainnhe/edge'
-Plug 'ghifarit53/tokyonight-vim'
 Plug 'neoclide/coc-css'
 Plug 'ap/vim-css-color'
 Plug 'mcchrish/nnn.vim'
 Plug 'AlexvZyl/nordic.nvim', { 'branch': 'main' }
+Plug 'ghifarit53/tokyonight-vim'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
 
 set mouse=a
 set termguicolors
-let g:airline_theme='hybrid'
+"let g:airline_theme='hybrid'
 colorscheme tokyonight
 set number
 set encoding=UTF-8
@@ -35,6 +36,8 @@ set nowritebackup
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
+set guifont=Source_Code_Pro_for_Powerline:h14
 
 
 inoremap <silent><expr> <TAB>
@@ -62,33 +65,34 @@ nnoremap <Esc> :q<CR>
 nnoremap <C-n> :NnnPicker<CR>
 
 let g:coc_disable_startup_warning = 1
-
 " air-line
 
-     let g:airline_symbols = {}
+let g:airline_powerline_fonts = 1
 
-     " unicode symbols
-     let g:airline_left_sep = '»'
-     let g:airline_left_sep = '▶'
-     let g:airline_right_sep = '«'
-     let g:airline_right_sep = '◀'
-     let g:airline_symbols.linenr = '␊'
-     let g:airline_symbols.linenr = '␤'
-     let g:airline_symbols.linenr = '¶'
-     let g:airline_symbols.branch = '⎇'
-     let g:airline_symbols.paste = 'ρ'
-     let g:airline_symbols.paste = 'Þ'
-     let g:airline_symbols.paste = '∥'
-     let g:airline_symbols.whitespace = 'Ξ'
-
-     " airline symbols
-     let g:airline_left_sep = ''
-     let g:airline_left_alt_sep = ''
-     let g:airline_right_sep = ''
-     let g:airline_right_alt_sep = ''
-     let g:airline_symbols.branch = ''
-     let g:airline_symbols.readonly = ''
-     let g:airline_symbols.linenr = ''
+"     let g:airline_symbols = {}
+"
+"     " unicode symbols
+"     let g:airline_left_sep = '»'
+"     let g:airline_left_sep = '▶'
+"     let g:airline_right_sep = '«'
+"     let g:airline_right_sep = '◀'
+"     let g:airline_symbols.linenr = '␊'
+"     let g:airline_symbols.linenr = '␤'
+"     let g:airline_symbols.linenr = '¶'
+"     let g:airline_symbols.branch = '⎇'
+"     let g:airline_symbols.paste = 'ρ'
+"     let g:airline_symbols.paste = 'Þ'
+"     let g:airline_symbols.paste = '∥'
+"     let g:airline_symbols.whitespace = 'Ξ'
+"
+"     " airline symbols
+"     let g:airline_left_sep = ''
+"     let g:airline_left_alt_sep = ''
+"     let g:airline_right_sep = ''
+"     let g:airline_right_alt_sep = ''
+"     let g:airline_symbols.branch = ''
+"     let g:airline_symbols.readonly = ''
+"     let g:airline_symbols.linenr = ''
 
 " filenames like *.xml, *.html, *.xhtml, ...
 " " These are the file extensions where this plugin is enabled.
